@@ -69,3 +69,6 @@ UPDATE matches SET match_date = ?, team_a_id = ?, team_a_name = ?, team_b_id = ?
 
 -- name: GetMyTeamBalance :one
 SELECT score as balance FROM my_team WHERE id = ?;
+
+-- name: UpdateMyTeamScore :exec
+UPDATE my_team SET score = ? WHERE id = ?;
